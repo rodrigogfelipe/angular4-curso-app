@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topo.component.css']
 })
 export class TopoComponent implements OnInit {
+  /*Declarando atributo*/ 
+  public titulo: string = 'Aprendendo Inglês' /*String interpolation enviado para o template HTML'*/
 
   constructor() { }
 
