@@ -1,4 +1,31 @@
-<app-progresso></app-progresso>
-<app-tentativas></app-tentativas>
+<!--Tera os componentes progresso e tentativas-->
+<div class="container"></div>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-sm-6">
+            <app-progresso></app-progresso>
+        </div>
+        <div class="col-sm-6">
+            <app-tentativas></app-tentativas>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h6>Traduza a frase</h6>
+            <p>How are you?</p>
 
-<button class="btn btn-primary">Teste</button>
+            <div class="form-group"><!--Textarea-->
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+        </div>
+    </div>
+    <!--Declarando o botão-->
+    <div class="row">
+        <div class="col">
+                <div class="d-flex justify-content-end"><!--flex justify tem a função de deixar o botão ao lado direito-->
+                <button type="button" class="btn btn-primary">Verificar</button></div>
+           </div>
+    </div>
+    
+  </div>
