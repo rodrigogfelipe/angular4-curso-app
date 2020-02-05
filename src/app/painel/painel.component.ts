@@ -12,6 +12,7 @@ import { from } from 'rxjs';
 export class PainelComponent implements OnInit {
   /*Atributos*/
   public frases: Frase[] = FRASES
+  public introducao: string = 'Traduza a frase'
 
   constructor() {console.log(this.frases)}
   /*ngOnInit e implementado com interface de um componente*/ 
