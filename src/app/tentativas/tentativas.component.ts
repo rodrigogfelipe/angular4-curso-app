@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tentativas.component.css']
 })
 export class TentativasComponent implements OnInit {
+  /*Declarando os atributos*/
+  public coracaoVazio: string='/assets/coracao_vazio.png'/*imagem png*/
+  public coracaoCheio: string='/assets/coracao_cheio.png'
 
   constructor() { }
 
