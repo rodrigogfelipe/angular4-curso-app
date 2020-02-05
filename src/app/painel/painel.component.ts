@@ -18,5 +18,11 @@ export class PainelComponent implements OnInit {
   /*ngOnInit e implementado com interface de um componente*/ 
   ngOnInit() {
   }
+  
+/*Declarando metados*/
+public atualizaReposta(): void {
+  console.log('teste')
+
+}
 
 }

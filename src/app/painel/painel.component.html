@@ -18,7 +18,10 @@
             <p>{{frases[1].fraseEng}}</p>
 
             <div class="form-group"><!--Textarea-->
-                <textarea class="form-control" rows="3"></textarea>
+                <textarea class="form-control" 
+                rows="3"
+                (input)="atualizaReposta()"
+                ></textarea>
               </div>
         </div>
     </div>
