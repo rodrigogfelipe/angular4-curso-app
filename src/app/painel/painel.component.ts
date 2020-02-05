@@ -23,8 +23,12 @@ export class PainelComponent implements OnInit {
 /*Declarando metados*/
 public atualizaReposta(resposta: Event): void {
   this.resposta= ((<HTMLInputElement>resposta.target).value) /*<HTMLInputElement acessar o value da resposta*/
-  console.log(this.resposta)
+  //console.log(this.resposta)
 
     } 
+
+    public verificarResposta(): void {
+      console.log('Verificar resposta: ', this.resposta)
+    }
 
 }
