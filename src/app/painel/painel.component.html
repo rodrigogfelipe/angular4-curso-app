@@ -15,12 +15,12 @@
     <div class="row">
         <div class="col">
             <h6>{{introducao}}</h6><!--introducao é um atributo da class painelcomponent -->
-            <p>{{frases[1].fraseEng}}</p>
+            <p>{{rodadaFrase.fraseEng}}</p>
 
             <div class="form-group"><!--Textarea-->
                 <textarea class="form-control" 
                 rows="3"
-                (input)="atualizaReposta($event)"
+                (input)="atualizaResposta($event)"
                 ></textarea>
               </div>
         </div>
