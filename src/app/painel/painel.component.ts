@@ -16,7 +16,7 @@ export class PainelComponent implements OnInit {
   public resposta: string
   public rodada: number= 0
   public rodadaFrase: Frase /*classe Frase.model.ts*/
-  public progresso: number
+  public progresso: number= 0
 
   constructor() {
     this.rodadaFrase = this.frases[this.rodada]/*this.rodada e iniciada com valor zero */
@@ -40,9 +40,9 @@ public atualizaResposta(resposta: Event): void {
       this.rodada++;
 
       /*Progresso*/
-      this.progresso = this.progresso + (100 / this.frases.length)
+      this.progresso = this.progresso + (100 / this.frases.length)/**frases.length possui 4 frases / 100 = 25% de progresso na barra */
       console.log(this.progresso)
-      
+
       /*atualizar o obj rodadaFrase */
       this.rodadaFrase = this.frases[this.rodada]
       console.log(this.rodadaFrase)

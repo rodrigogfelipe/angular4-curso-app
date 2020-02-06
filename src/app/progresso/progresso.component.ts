@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-progresso',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProgressoComponent implements OnInit {
 
   /*Atributos*/
-  public progresso: number= 75 /*progresso 25% significar o progresso de 100% da barra */
+  @Input() public progresso: number= 0/*progresso 25% significar o progresso de 100% da barra */
 
   constructor() { }
 
