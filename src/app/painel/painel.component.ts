@@ -16,6 +16,7 @@ export class PainelComponent implements OnInit {
   public resposta: string
   public rodada: number= 0
   public rodadaFrase: Frase /*classe Frase.model.ts*/
+  public progresso: number
 
   constructor() {
     this.rodadaFrase = this.frases[this.rodada]/*this.rodada e iniciada com valor zero */
@@ -36,9 +37,15 @@ public atualizaResposta(resposta: Event): void {
         alert('A tradução esta correta') 
 
     /*trocar pergunta da rodada*/
-     this.rodada++;
-      this.rodadaFrase = this.frases[this.rodada]/*atualizar o obj rodadaFrase */
-     console.log(this.rodadaFrase)
+      this.rodada++;
+
+      /*Progresso*/
+      this.progresso = this.progresso + (100 / this.frases.length)
+      console.log(this.progresso)
+      
+      /*atualizar o obj rodadaFrase */
+      this.rodadaFrase = this.frases[this.rodada]
+      console.log(this.rodadaFrase)
     } 
       else {
             alert('A tradução está errada')

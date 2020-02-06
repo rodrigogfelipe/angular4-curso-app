@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressoComponent implements OnInit {
 
+  /*Atributos*/
+  public progresso: number= 75 /*progresso 25% significar o progresso de 100% da barra */
+
   constructor() { }
 
   ngOnInit() {
