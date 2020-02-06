@@ -32,7 +32,16 @@ public atualizaResposta(resposta: Event): void {
     } 
 
     public verificarResposta(): void {
-      console.log('Verificar resposta: ', this.resposta)
-    }
+      if(this.rodadaFrase.frasePtBr == this.resposta) {
+        alert('A tradução esta correta') 
 
-}
+    /*trocar pergunta da rodada*/
+     this.rodada++;
+      this.rodadaFrase = this.frases[this.rodada]/*atualizar o obj rodadaFrase */
+     console.log(this.rodadaFrase)
+    } 
+      else {
+            alert('A tradução está errada')
+          }
+      }
+  }
