@@ -13,14 +13,14 @@ export class PainelComponent implements OnInit {
   /*Atributos*/
   public frases: Frase[] = FRASES
   public introducao: string = 'Traduza a frase'
-  public resposta: string
+  public resposta: string= '' /*resposta foi declarado como vazio para não mostra a msg undefined na texarea*/
   public rodada: number= 0
   public rodadaFrase: Frase /*classe Frase.model.ts*/
   public progresso: number= 0
 
   constructor() {
-    this.rodadaFrase = this.frases[this.rodada]/*this.rodada e iniciada com valor zero */
-    console.log(this.rodadaFrase)}
+    this.atualizaRodada()/*Metado atualizarRodada*/
+  }
   /*ngOnInit e implementado com interface de um componente*/ 
   ngOnInit() {
   }
@@ -43,12 +43,17 @@ public atualizaResposta(resposta: Event): void {
       this.progresso = this.progresso + (100 / this.frases.length)/**frases.length possui 4 frases / 100 = 25% de progresso na barra */
       console.log(this.progresso)
 
-      /*atualizar o obj rodadaFrase */
-      this.rodadaFrase = this.frases[this.rodada]
-      console.log(this.rodadaFrase)
+      this.atualizaRodada()/*Metado atualizarRodada*/
     } 
       else {
             alert('A tradução está errada')
           }
       }
+
+    public atualizaRodada(): void{
+      /*define a frase da rodada*/
+      this.rodadaFrase = this.frases[this.rodada]
+      /*limpar o textarea resposta*/
+      this.resposta= ''
+    }
   }

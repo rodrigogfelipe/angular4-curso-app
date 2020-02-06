@@ -21,7 +21,8 @@
                 <textarea class="form-control" 
                 rows="3"
                 (input)="atualizaResposta($event)"
-                ></textarea>
+                [value]= "resposta"
+                ></textarea> <!--value resposta limpa o campo resposta-->
               </div>
         </div>
     </div>
