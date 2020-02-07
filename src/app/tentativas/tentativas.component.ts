@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Coracao} from '../shared/coracao.model'
-import { ConsoleReporter } from 'jasmine';
 
 @Component({
   selector: 'app-tentativas',
