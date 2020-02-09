@@ -17,6 +17,7 @@ export class PainelComponent implements OnInit {
   public rodada: number= 0
   public rodadaFrase: Frase /*classe Frase.model.ts*/
   public progresso: number= 0
+  public tentativas: number = 3
 
   constructor() {
     this.atualizaRodada()/*Metado atualizarRodada*/
@@ -46,7 +47,10 @@ public atualizaResposta(resposta: Event): void {
       this.atualizaRodada()/*Metado atualizarRodada*/
     } 
       else {
-            alert('A tradução está errada')
+        /*diminuir  a variavel tentativas*/
+        this.tentativas--
+        if(this.tentativas === -1)
+            alert('Você perdeu todas as tentativas')
           }
       }
 
