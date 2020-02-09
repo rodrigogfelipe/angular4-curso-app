@@ -35,14 +35,15 @@ public atualizaResposta(resposta: Event): void {
 
     public verificarResposta(): void {
       if(this.rodadaFrase.frasePtBr == this.resposta) {
-        alert('A tradução esta correta') 
 
     /*trocar pergunta da rodada*/
       this.rodada++;
 
       /*Progresso*/
       this.progresso = this.progresso + (100 / this.frases.length)/**frases.length possui 4 frases / 100 = 25% de progresso na barra */
-      console.log(this.progresso)
+      if(this.rodada === 4) {
+        alert('Concluiu as traduções com sucesso')
+      }
 
       this.atualizaRodada()/*Metado atualizarRodada*/
     } 
