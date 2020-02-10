@@ -1,2 +1,5 @@
 <app-topo></app-topo>
-<app-painel (encerrarJogo)="encerrarJogo($event)"></app-painel>
+<!--ngIf se o atributo for verdadeiro exibira o conteudo div, caso seja falso não exibira o conteudo  -->
+<div *ngIf="jogoEmAndamento">
+    <app-painel (encerrarJogo)="encerrarJogo($event)"></app-painel>
+</div>

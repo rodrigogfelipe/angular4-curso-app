@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
 import {Frase} from '../shared/frase.model'/*importando shared model*/ 
 import {FRASES} from './frases-mock' /*importação da frases-mock.ts */
 import { from } from 'rxjs';
@@ -9,7 +9,7 @@ import { from } from 'rxjs';
   templateUrl: './painel.component.html',
   styleUrls: ['./painel.component.css']
 })
-export class PainelComponent implements OnInit {
+export class PainelComponent implements OnInit, OnDestroy {
   /*Atributos*/
   public frases: Frase[] = FRASES
   public introducao: string = 'Traduza a frase'
@@ -26,6 +26,10 @@ export class PainelComponent implements OnInit {
   }
   /*ngOnInit e implementado com interface de um componente*/ 
   ngOnInit() {
+  }
+
+  ngOnDestroy(){
+    console.log('Componente do painel destruido')
   }
 
 /*Declarando metados*/
